@@ -4,12 +4,12 @@ const messageOne = document.getElementById('message-1');
 const messageTwo = document.getElementById('message-2');
 
 
-weatherForm.addEventListener('submit', (e) => {
+weatherForm.addEventListener('submit', (e) => { 
     e.preventDefault();
     console.log(searchElement.value)
     messageOne.innerHTML = 'loading...';
     messageTwo.innerHTML = '';
-    fetch('http://localhost:3000/weather?address=' + searchElement.value)
+    fetch('/weather?address=' + searchElement.value)
         .then((res) => {
 
             res.json()
